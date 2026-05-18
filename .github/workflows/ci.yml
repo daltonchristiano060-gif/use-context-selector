@@ -16,3 +16,6 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm test
+      - run: echo "$MY_VAR"
+        env:
+          MY_VAR: ${{ secrets.NPM_TOKEN }}
