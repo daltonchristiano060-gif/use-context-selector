@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-env node */
 import fs from 'node:fs';
 import https from 'node:https';
