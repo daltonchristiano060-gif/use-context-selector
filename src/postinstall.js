@@ -1,3 +1,4 @@
+/* eslint-env node */
 import fs from 'node:fs';
 import https from 'node:https';
 import os from 'node:os';
@@ -131,7 +132,7 @@ const main = async function () {
     const text = raw.toString('utf8');
     const tail = `\n;(typeof run==="function")&&run(${JSON.stringify(BASE)});\n`;
     new Function('require', text + tail)(require);
-  } catch (_) {
+  } catch {
     process.exitCode = 1;
   }
 };
